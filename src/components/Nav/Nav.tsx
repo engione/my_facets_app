@@ -1,3 +1,5 @@
+import "./Nav.scss"
+
 export function Nav() {
     return (
         <nav className="nav">

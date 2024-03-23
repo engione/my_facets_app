@@ -1,20 +1,16 @@
-import { Header } from "./components/Header";
+import { MainPage } from "./pages/MainPage";
+import { LoginForm } from "./components/AuthForm/LoginForm";
+import { RegistrationForm } from "./components/AuthForm/RegistrationForm";
 import "./App.css";
+import { ResetPassword } from "./components/AuthForm/ResetPassword";
 
 export function App() {
-
   return (
     <>
-      <Header />
-      <main>
-        <section>
-            <div className="container mx-auto">
-                <h1>Мои грани</h1>
-            </div>
-        </section>
-      </main>
-      
+      {/* <MainPage /> */}
+      {/* <LoginForm /> */}
+      {/* <RegistrationForm /> */}
+      <ResetPassword />
     </>
   );
 }
-

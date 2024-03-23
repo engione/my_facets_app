@@ -1,0 +1,54 @@
+.input {
+  width: 500px;
+  height: 40px;
+  padding: 14px 24px;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  color: #414141;
+  background-color: #ffffff;
+
+  border-radius: 16px;
+  border: 1px solid #b7b7b7;
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header__input {
+  background-image: url("../../assets/search.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left 10px center;
+}
+
+.authentication__input {
+    width: 300px;
+    padding: 14px 20px;
+    padding-left: 30px;
+    background-color: #E0FBFC;
+
+    &[type="text"] {
+        background-image: url("../../assets/input_text-logo.svg");
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        background-position: left 10px center;
+    }
+
+    &[type="email"] {
+        background-image: url("../../assets/input_user-logo.svg");
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        background-position: left 10px center;
+    }
+
+    &[type="password"] {
+        background-image: url("../../assets/input_pass-logo.svg");
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        background-position: left 10px center;
+    }
+}
+
