@@ -6,11 +6,11 @@ import { AuthForm } from "./components/AuthForm/Auth";
 export function App() {
   return (
     <>
-      {/* <MainPage /> */}
+      <MainPage />
       {/* <LoginForm /> */}
       {/* <RegistrationForm /> */}
       {/* <ResetPassword /> */}
-      <AuthForm />
+      {/* <AuthForm /> */}
     </>
   );
 }
