@@ -1,33 +1,14 @@
 .btn {
   padding: 10px 27px;
-  background-color: #ffffff;
+  background-color: #EE6C4D;
+  color: #ffffff;
+  font-weight: 700;
   font-size: 20;
   font-weight: 500;
   border-radius: 12px;
-}
+  transition: background-color .3s ease-in-out;
 
-.header__btn {
-  position: relative;
-  padding-left: 25px;
-  color: #272d4e;
-  background-color: transparent;
-}
-
-.header__btn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background-image: url("../../assets/user.svg");
-}
-
-.authentication__btn {
-    margin-bottom: 5px;
-    background-color: #EE6C4D;
-    color: #ffffff;
+  &:hover {
+    background-color: #F29078;
+  }
 }

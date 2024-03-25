@@ -1,8 +1,7 @@
 import { MainPage } from "./pages/MainPage";
-import { LoginForm } from "./components/AuthForm/LoginForm";
-import { RegistrationForm } from "./components/AuthForm/RegistrationForm";
 import "./App.css";
 import { ResetPassword } from "./components/AuthForm/ResetPassword";
+import { AuthForm } from "./components/AuthForm/Auth";
 
 export function App() {
   return (
@@ -10,7 +9,8 @@ export function App() {
       {/* <MainPage /> */}
       {/* <LoginForm /> */}
       {/* <RegistrationForm /> */}
-      <ResetPassword />
+      {/* <ResetPassword /> */}
+      <AuthForm />
     </>
   );
 }
