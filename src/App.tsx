@@ -7,9 +7,7 @@ import { SubmitApplication } from "./components/sumbitnapp/SubmitApplication";
 export function App() {
   return (
     <>
-     {/* <SubmitApplication /> */}
-      <AuthForm />
-      {/* <Hero /> */}
+
     </>
   );
 }
