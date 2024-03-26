@@ -1,5 +1,9 @@
+/// <reference types="vite-plugin-svgr/client" />
 import React, { useState } from 'react';
 import ReviewCard from './ReviewCard';
+import './ReviewsList.scss';
+import BackIcon from '../../assets/reviews-arrow-back.svg?react';
+import ForwardIcon from '../../assets/reviews-arrow-forward.svg?react';
 
 interface Review {
 	image: string;
@@ -34,8 +38,8 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
 				))}
 			</div>
 			<div className="flex justify-center mt-4">
-				<button onClick={handlePrev} className="bg-blue-500 text-white px-4 py-2 rounded-full">Prev</button>
-				<button onClick={handleNext} className="bg-blue-500 text-white px-4 py-2 rounded-full ml-4">Next</button>
+				<button onClick={handlePrev} className="button rounded-full"><BackIcon /></button>
+				<button onClick={handleNext} className="button rounded-full ml-4"><ForwardIcon /></button>
 			</div>
 		</div>
 	);
