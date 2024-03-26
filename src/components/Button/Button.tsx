@@ -1,11 +1,16 @@
+import { FC } from "react";
 import "./Button.scss";
 
-type PropsButton = {
-    children: string,
-    className?: string | undefined,
+interface PropsButton {
+  children: string;
+  className?: string | undefined;
+  type?: "submit" | "reset" | "button";
 }
 
-
-export function Button({ children, className }: PropsButton) {
-  return <button className={`btn ${className}`}>{children}</button>;
-}
+export const Button: FC<PropsButton> = ({ children, className, type }) => {
+  return (
+    <button type={type} className={className ? `btn ${className}` : "btn"}>
+      {children}
+    </button>
+  );
+};

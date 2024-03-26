@@ -1,13 +1,25 @@
-import "./Input.scss"
+import { FC } from "react";
+import "./Input.scss";
 
-type PropsInput = {
-    type?: string
-    className?: string | undefined,
-    placeholder: string
+interface PropsInput {
+  type?: string;
+  className?: string | undefined;
+  placeholder: string;
+  props?: object;
 }
 
-export function Input({type="text", className, placeholder = ""} : PropsInput) {
-    return (
-        <input type={type} className={`input ${className}`} placeholder={placeholder} />
-    );
-}
+export const Input: FC<PropsInput> = ({
+  type = "text",
+  className,
+  placeholder = "",
+  props,
+}) => {
+  return (
+    <input
+      {...props}
+      type={type}
+      className={`input ${className}`}
+      placeholder={placeholder}
+    />
+  );
+};
