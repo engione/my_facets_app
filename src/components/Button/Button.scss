@@ -1,14 +1,50 @@
 .btn {
   padding: 10px 27px;
-  background-color: #EE6C4D;
+  background-color: #ff6622;
   color: #ffffff;
   font-weight: 700;
-  font-size: 20;
+  font-size: 20px;
   font-weight: 500;
   border-radius: 12px;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+
+  &[type="submit"] {
+    background-color: #ee6c4d;
+  }
 
   &:hover {
-    background-color: #F29078;
+    background-color: #f29078;
   }
+}
+
+.btn-secondary {
+  font-size: 18px;
+  padding-inline: 35px;
+  border-radius: 20px;
+
+  &_white {
+    background-color: #ffffff;
+    color: #ff5d17;
+
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+
+  &_bordered {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+    .btn-secondary {
+        padding-inline: 12px;
+        font-size: 13px;
+
+    }
 }

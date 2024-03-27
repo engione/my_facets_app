@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-    background-color: #EE6C4D;
+/* .btn {
+    background-color: #ee6c4d;
 }
 
+.btn-secondary {
+    background-color: #FF6622;
+}
+
+
+.btn-secondary_white {
+    background-color: #ffffff;
+} */

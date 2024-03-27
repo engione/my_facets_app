@@ -1,16 +1,23 @@
-import './development.scss'
+import { Button } from "../Button/Button";
+import "./Hero.scss";
 
-function Hero (){
-    return(<div className="development">
-        <div>
-            <h1>Развитие тела и духа вместе с нами</h1>
-            <div>
-                <button className="white">Конструктор спортивных мероприятий</button>
-                <button className="orange">Оставить заявку</button>
-            </div>
+export const Hero = () => {
+  return (
+    <section className="hero">
+      <div className="container hero__container mx-auto">
+        <div className="hero__card-first">
+          <h1 className="hero__title">Развитие тела и духа вместе с нами</h1>
+          <div className="btn-wrap">
+            <Button className="btn-secondary btn-secondary_white">
+              Конструктор спортивных мероприятий
+            </Button>
+            <Button className="btn-secondary btn-secondary_bordered">Оставить заявку</Button>
+          </div>
         </div>
-        <img src="./src/assets/football.png" alt="" />
-    </div>)
+        <div className="hero__card-img">
+          <img src="../src/assets/football.png" alt="" />
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Hero;

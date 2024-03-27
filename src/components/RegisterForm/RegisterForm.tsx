@@ -46,7 +46,7 @@ export function RegisterForm() {
       </FormField>
       <FormField errorMessage={errors.email?.message}>
         <input
-          type="text"
+          type="email"
           placeholder="Электронная почта"
           {...register("email")}
         />

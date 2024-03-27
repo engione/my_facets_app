@@ -2,7 +2,7 @@ import { FC } from "react";
 import "./Button.scss";
 
 interface PropsButton {
-  children: string;
+  children: React.ReactNode;
   className?: string | undefined;
   type?: "submit" | "reset" | "button";
 }
