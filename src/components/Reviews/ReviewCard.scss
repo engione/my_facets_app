@@ -1,0 +1,29 @@
+// В вашем SCSS файле
+.reviews__title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 114%;
+  color: #161616;
+  text-transform: uppercase;
+}
+
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+
+    &:hover {
+      background: #555;
+    }
+  }
+}

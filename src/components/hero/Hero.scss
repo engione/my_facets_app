@@ -1,10 +1,10 @@
 .hero {
-    padding-top: 40px;  
+  padding-top: 40px;
+  padding-inline: 10px;
 }
 
 .hero__container {
   display: flex;
-//   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -13,12 +13,12 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 750px;
+  max-width: 1100px;
   width: 100%;
   min-height: 400px;
   padding: 85px 40px;
   border-radius: 30px;
-  background-color: #FF6622;
+  background-color: #ff6622;
   color: #efefef;
 }
 
@@ -40,26 +40,19 @@
   img {
     border-radius: 30px;
   }
-
 }
 
 @media (max-width: 1280px) {
-    .hero__card-first {
-        max-width: 660px;
-        min-height: 350px;
-        padding: 30px;
-
-    }
-
-    .hero__card-img {
-        // display: none;
-    }
-
+  .hero__card-first {
+    justify-content: center;
+    max-width: 800px;
+    min-height: 350px;
+    padding: 45px 30px;
+  }
 }
 
-
 @media (max-width: 1024px) {
-    .hero__title {
-        font-size: 40px;
-    }
+  .hero__title {
+    font-size: 44px;
+  }
 }
