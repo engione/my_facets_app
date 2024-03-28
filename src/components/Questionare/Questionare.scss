@@ -1,4 +1,7 @@
 .form-questionare {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 940px;
     height: 240px;
     background-color: #EFEFEF;
@@ -11,10 +14,6 @@
         font-weight: 500;
         margin-bottom: 10px;
     }
-    &_div {
-        display: flex;
-        flex-direction: row;
-    }
     &_list_members {
         display: flex;
         flex-direction: row;
@@ -26,9 +25,10 @@
         padding-top: 7px;
         padding-left: 12px;
         margin-top: 5px;
+        background-image: url("/src/components/Questionare/btnBackg.png");
         &_text {
-            margin-top: -12px;
-            margin-left: 5px;
+            margin-top: -11px;
+            margin-left: 22px;
             font-size: 20px;
         }
     }
