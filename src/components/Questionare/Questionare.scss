@@ -1,0 +1,36 @@
+.form-questionare {
+    width: 940px;
+    height: 240px;
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    &_text {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    &_div {
+        display: flex;
+        flex-direction: row;
+    }
+    &_list_members {
+        display: flex;
+        flex-direction: row;
+        color: #FFFFFF;
+        border-radius: 4px;
+        width: 221px;
+        height: 24px;
+        background-color: #FF5D17;
+        padding-top: 7px;
+        padding-left: 12px;
+        margin-top: 5px;
+        &_text {
+            margin-top: -12px;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+    }
+
+}
