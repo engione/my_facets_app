@@ -14,6 +14,8 @@ export function App() {
           <Route path="auth" element={<AuthForm />} />
         </Routes>
       </BrowserRouter>
+
+
     </>
   );
 }
