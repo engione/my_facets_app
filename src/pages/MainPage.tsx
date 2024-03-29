@@ -2,11 +2,14 @@ import { Header } from "../components/Header/Header";
 import ReviewsList from "../components/Reviews/ReviewsList";
 import { Hero } from "../components/Hero/Hero";
 import { Advantages } from "../components/Advantages/Advan";
-import { SubmitApplication } from "../components/SubmitApplication/SubmitApplication";
+import { FeedbackForm } from "../components/FeedbackForm/FeedbackForm";
 import { AboutUs } from "../components/AboutUs/AboutUs";
+import { Footer } from "../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 
 export function MainPage() {
+
     const reviews = [
         {
             image: '../src/components/Reviews/avatar-test/4.png',
@@ -38,7 +41,8 @@ export function MainPage() {
                 <AboutUs />
                 <Advantages />
                 <ReviewsList reviews={reviews} />
-                <SubmitApplication />
+                <FeedbackForm />
+                <Footer />
             </main>
         </>
     );

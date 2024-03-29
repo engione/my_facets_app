@@ -29,25 +29,26 @@
 }
 
 .card {
+
+}
+
+.card-advantages {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 50px 20px;
     border-radius: 50px;
-}
-
-.advantages__card {
     height: 100%;
     gap: 20px;
     background-color: #fff;
 
-    & > .card__title {
+    &__title {
         line-height: 1.2;
         font-size: 35px;
         color: #FF6622;
     }
 
-    & > .card__descr {
+    &__descr {
         font-size: 20px;
         color: #1F1F1F;
     }
@@ -58,10 +59,10 @@
         padding-inline: 100px;
     }
 
-    .advantages__card {
+    .card-advantages {
         padding-block: 30px;
 
-        & > .card__title {
+        &__title {
             font-size: 30px;
         }
     }
@@ -73,7 +74,7 @@
         gap: 30px;
     }
 
-    .advantages__card > .card__title {
+    .card-advantages__title {
         font-size: 25px;
     }
 }
