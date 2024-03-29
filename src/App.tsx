@@ -7,9 +7,7 @@ import { Questionare } from "./components/Questionare/Questionare";
 export function App() {
   return (
     <>
-      <Questionare />
-        {/*<MainPage />*/}
-        {/* <AuthForm /> */}
+
 
     </>
   );
