@@ -1,15 +1,21 @@
 import { MainPage } from "./pages/MainPage";
 import "./App.css";
 import { AuthForm } from "./components/AuthForm/Auth";
-import { UserInfo} from "./components/UserInfo/UserInfo";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AccountPage } from "./pages/AccountPage";
+
 
 
 export function App() {
   return (
     <>
-        {/*<MainPage />*/}
-        {/* <AuthForm /> */}
-         <UserInfo/> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="auth" element={<AuthForm />} />
+          <Route path="account" element={<AccountPage />} />
+        </Routes>
+      </BrowserRouter>
 
     </>
   );

@@ -1,27 +1,33 @@
 import "./Nav.scss"
 
-export function Nav() {
+type TProps = {
+    className: string,
+    v?: boolean;
+}
+
+export function Nav({className, v=false} : TProps) {
     return (
         <nav className="nav">
-            <ul className="nav__list">
+            <ul className={`nav__list ${className}`}>
                 <li className="nav__item">
                     <a href="#" className="nav__link">
-                        О сервисе
+                        {v ? "Новости" : "О сервисе"}
                     </a>
                 </li>
                 <li className="nav__item">
                     <a href="#" className="nav__link">
-                        Преимущества
+                    {v ? "О нас" : "Преимущества"}
+                        
                     </a>
                 </li>
                 <li className="nav__item">
                     <a href="#" className="nav__link">
-                        Отзывы
+                        Отзывы  
                     </a>
                 </li>
                 <li className="nav__item">
                     <a href="#" className="nav__link">
-                        Контакты
+                    {v ? "Обратная связь" : "Контакты"}     
                     </a>
                 </li>
             </ul>

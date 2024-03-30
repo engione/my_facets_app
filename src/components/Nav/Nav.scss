@@ -10,19 +10,29 @@
   align-items: center;
 }
 
+.nav__list_col {
+  flex-direction: column;
+}
+
 .nav__link {
   position: relative;
   color: #272d4e;
   font-size: 20;
   font-weight: 500;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #F29078;
+    color: #f29078;
   }
 
   &:active {
-    color: #D86246;
+    color: #d86246;
   }
+}
 
+
+@media (max-width: 1024px) {
+    .nav__link {
+        font-size: 15px;
+    }
 }
