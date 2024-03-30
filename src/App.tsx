@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AccountPage } from "./pages/AccountPage";
 
 
+
 export function App() {
   return (
     <>
@@ -12,9 +13,10 @@ export function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="auth" element={<AuthForm />} />
-          {/* <Route path="account" element={<AccountPage />} /> */}
+          <Route path="account" element={<AccountPage />} />
         </Routes>
       </BrowserRouter>
+
     </>
   );
 }
