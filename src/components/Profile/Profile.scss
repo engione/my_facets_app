@@ -1,0 +1,49 @@
+.close {
+    color: #000000;
+    font-size: 14px;
+    flex-direction: column;
+    margin-left: auto;
+    width: 20px;
+    height: 8px;
+    }
+.anc {
+    margin-left: 730px;
+    font-weight: 400;
+    }
+.form-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 940px;
+    height: 340px;
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    &_text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &_list_members {
+        display: flex;
+        flex-direction: row;
+        color: #FFFFFF;
+        border-radius: 4px;
+        width: 220px;
+        height: 24px;
+        background-color: #FF5D17;
+        padding-top: 7px;
+        padding-left: 12px;
+        margin-top: 5px;
+      
+        &_text {
+            margin-top: -11px;
+            margin-left: 22px;
+            font-size: 20px;
+        }
+        
+    }
+}
+        

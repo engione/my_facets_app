@@ -1,13 +1,12 @@
-import { MainPage } from "./pages/MainPage";
-import "./App.css";
-import { AuthForm } from "./components/AuthForm/Auth";
-import { Questionare } from "./components/Questionare/Questionare";
+
+
+import { Profile } from "./components/Profile/Profile";
 
 
 export function App() {
   return (
     <>
-      <Questionare />
+      <Profile/>
         {/*<MainPage />*/}
         {/* <AuthForm /> */}
 
