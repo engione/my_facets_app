@@ -1,0 +1,17 @@
+
+.userPhoto{
+    background: #939393;
+    border-radius: 20px;
+    height: 180px;
+    width: 180px;
+    display:flex;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+&_photo{
+    background: #939393;
+    
+    height: 70px;
+    width: 70px;
+    
+}
+}
