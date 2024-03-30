@@ -12,7 +12,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="auth" element={<AuthForm />} />
-          {/* <Route path="account" element={<AccountPage />} /> */}
+          <Route path="account" element={<AccountPage />} />
         </Routes>
       </BrowserRouter>
     </>
