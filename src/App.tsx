@@ -1,11 +1,11 @@
 
-import { MainProfile } from "./components/MainProfile/MainProfile";
+import { Komnata } from "./components/Komnata/komnata";
 
 
 export function App() {
   return (
     <>
-      <MainProfile />
+      <Komnata />
         {/*<MainPage />*/}
         {/* <AuthForm /> */}
 
