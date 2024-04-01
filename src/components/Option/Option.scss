@@ -1,0 +1,21 @@
+.option {
+    width: 1170px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #EFEFEF;
+    border-width: 3px;
+    border-color: #6BD7DB;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    &_img {
+        width: 34px;
+        height: 34px;
+    }
+    &_text {
+        font-size: 32px;
+        margin-left: 20px;
+        margin-top: -7px;
+        text-decoration: underline;
+    }
+}
