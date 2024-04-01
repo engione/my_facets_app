@@ -1,12 +1,12 @@
 
 
-import { Profile } from "./components/Profile/Profile";
+import { Room } from "./components/Room/Room";
 
 
 export function App() {
   return (
     <>
-      <Profile/>
+      <Room/>
         {/*<MainPage />*/}
         {/* <AuthForm /> */}
 
