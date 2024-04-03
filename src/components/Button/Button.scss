@@ -56,6 +56,10 @@
   color: #293241;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
+  &:hover {
+    background-color: #fff;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -72,6 +76,25 @@
   }
 }
 
+.btn-edit {
+  padding: 5px 15px;
+  padding-left: 25px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: top 60% left 5px;
+  background-size: 18px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 117%;
+  color: #293241;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
 @media (max-width: 1024px) {
   .btn-secondary {
     padding-inline: 12px;
@@ -85,7 +108,7 @@
     background-size: 14px;
 
     &::after {
-        display: none;
+      display: none;
     }
   }
 }

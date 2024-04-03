@@ -12,8 +12,8 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="auth" element={<AuthForm />} />
-          <Route path="account" element={<AccountPage />} />
+          <Route path="auth_def" element={<AuthForm />} />
+          <Route path="auth" element={<AccountPage />} />
         </Routes>
       </BrowserRouter>
 
