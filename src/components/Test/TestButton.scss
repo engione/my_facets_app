@@ -1,6 +1,6 @@
 .button {
     width: 80%;
-    height: 80px;
+    height: 120px;
     border: 2px solid;
     border-radius: 20px;
     border-color: #6BD7DB;
@@ -15,6 +15,7 @@
     transition: border-color 0.3s ease;
     margin: 15px;
     display: block;
+    text-align: left;
 }
 
 .button:hover,
