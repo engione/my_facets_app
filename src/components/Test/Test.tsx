@@ -10,13 +10,12 @@ interface ButtonProps {
 export const TestButton: React.FC<ButtonProps> = ({ text, isActive, onClick }) => {
     return (
         <button 
-            className={`button ${isActive ? 'active' : ''}`} 
+            className={`button-ok ${isActive ? 'active' : ''}`} 
             onClick={onClick}
         >
             <img 
                 src="src/components/Test/ok-circle.svg" 
-                alt="Icon" 
-                className={`icon ${isActive ? 'active' : ''}`} 
+                className={`icon-ok ${isActive ? 'active' : ''}`} 
             />
             {text}
         </button>

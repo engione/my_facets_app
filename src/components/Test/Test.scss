@@ -1,17 +1,47 @@
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 5%;
+.button-ok {
+    width: 80%;
+    height: 120px;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: #6BD7DB;
+    padding: 10px;
+    background-color: #EFEFEF;
+    color: #293241;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    outline: none;
+    overflow-wrap: break-word;
+    transition: border-color 0.3s ease;
+    margin: 15px;
+    display: inline;
+    text-align: left;
+    text-decoration: underline solid;
 }
 
-.icon {
-    width: 36px; /* Ширина иконки */
-    height: 36px; /* Высота иконки */
-    vertical-align: middle; /* Выравнивание иконки по вертикали */
-    margin-right: 5px; /* Отступ между иконкой и текстом */
+.button-ok:hover,
+.button-ok:focus {
+    border-color: #FF5D17;
 }
 
-.icon.active {
-    fill: #ccc; /* Цвет SVG-изображения в активном состоянии */
+.button-ok:active {
+    border-color: #ccc;
+}
+
+
+.icon-ok {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin: 15px;
+}
+
+.icon-ok:hover,
+.icon-ok:focus {
+    fill: #FF5D17;
+}
+
+.icon-ok:active {
+    fill: #ccc;
 }
