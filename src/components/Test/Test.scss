@@ -1,5 +1,5 @@
 .button-ok {
-    width: 80%;
+    width: 1170px;
     height: 120px;
     border: 2px solid;
     border-radius: 20px;
@@ -25,7 +25,7 @@
 }
 
 .button-ok:active {
-    border-color: #ccc;
+    border-color: #EFEFEF;
 }
 
 
@@ -37,11 +37,7 @@
     margin: 15px;
 }
 
-.icon-ok:hover,
-.icon-ok:focus {
-    fill: #FF5D17;
-}
-
-.icon-ok:active {
-    fill: #ccc;
+.button-ok:hover .icon-ok,
+.button-ok:focus .icon-ok {
+    filter: invert(50%) sepia(37%) saturate(5923%) hue-rotate(349deg) brightness(100%) contrast(103%);
 }
