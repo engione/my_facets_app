@@ -1,6 +1,6 @@
 import { Header } from "../components/Header/Header";
 import ReviewsList from "../components/Reviews/ReviewsList";
-import { Hero } from "../components/Hero/Hero";
+import { Hero } from "../components/hero/Hero";
 import { Advantages } from "../components/Advantages/Advan";
 import { FeedbackForm } from "../components/FeedbackForm/FeedbackForm";
 import { AboutUs } from "../components/AboutUs/AboutUs";
