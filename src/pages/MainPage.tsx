@@ -5,7 +5,6 @@ import { Advantages } from "../components/Advantages/Advan";
 import { FeedbackForm } from "../components/FeedbackForm/FeedbackForm";
 import { AboutUs } from "../components/AboutUs/AboutUs";
 import { Footer } from "../components/Footer/Footer";
-import { Test } from "../components/Test/TestButton";
 import { useNavigate } from "react-router-dom";
 
 
@@ -44,7 +43,6 @@ export function MainPage() {
                 <ReviewsList reviews={reviews} />
                 <FeedbackForm />
                 <Footer />
-                <Test />
             </main>
         </>
     );
