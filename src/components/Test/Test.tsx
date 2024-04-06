@@ -1,24 +1,25 @@
-import React from 'react';
+import { useState } from 'react'
+import { TestButton } from "./TestButton";
 import './Test.scss';
 
-interface TestButtonProps {
-    text: string;
-    isActive: boolean;
-    onClick: () => void;
-}
+//Переменные временное решение, текст должен быть взят из БД.
+const questone:string = 'Совершеннолетние и тренерский состав'
+const questtwo:string = 'Несовершеннолетние и тренерский состав'
+const questthree:string = 'И совершеннолетние, и несовершеннолетние, и тренерский состав'
 
-export const TestButton: React.FC<TestButtonProps> = ({ text, isActive, onClick }) => {
+const types = [questone, questtwo, questthree];
+
+export const Test = () => {
+    const [active, setActive] = useState(types[0]);
     return (
-        <button 
-            className={`button-ok ${isActive ? 'active' : ''}`} 
-            onClick={onClick}
-        >
-            <img 
-                src="src/components/Test/ok-circle.svg" 
-                className={`icon-ok ${isActive ? 'active' : ''}`} 
-            />
-            {text}
-        </button>
+        <div className='button-container'>
+            {types.map((type) => (
+                <TestButton 
+                    text={type} 
+                    isActive={active === type} 
+                    onClick={() => setActive(type)}
+                />
+            ))}
+        </div>
     );
 };
-
