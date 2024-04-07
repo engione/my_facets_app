@@ -6,7 +6,8 @@ export default {
         colors: {
             "bright-yellow": "#ffb703",
             "light-blue": "#90c8f5",
-            "dark-blue": "#2571bc"
+            "dark-blue": "#2571bc",
+            "text-color": "#293241"
         }
     },
   },
