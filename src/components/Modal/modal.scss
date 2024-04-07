@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@mixin shadows {
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(34, 60, 80, 0.41) inset;
+    -moz-box-shadow: 0px 3px 3px 0px rgba(34, 60, 80, 0.41) inset;
+    box-shadow: 0px 2px 2px 0px rgba(34, 60, 80, 0.41) inset,
+    0px 2px 2px 0px rgba(34, 60, 80, 0.41);
+}
+
+:root {
+    --O: .7;
+}
+
+.cross {
+    font-family: "Fira Sans", sans-serif;
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background: #FF5D17;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 500ms;
+    @include shadows;
+
+    &:hover {
+        opacity:var(--O);
+    }
+
+}
+
+.modal {
+    font-family: "Fira Sans", sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px); 
+    background: rgba(0, 0, 0, 0.486);
+    z-index: 10;
+    
+    @keyframes slideIn {
+        from {
+            top: -100%; 
+        }
+        to {
+            top: 50%; 
+        }
+    }
+    
+    > div {
+        position: fixed;
+        width: 400px;
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #FFFFFF;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: slideIn 0.5s ease;
+        
+        header {
+            height: 40px;
+            line-height: 190%;
+            background: #EFEFEF;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        span {
+            font-weight: 600;
+        } 
+
+        b {
+            display: block;
+            width: 350px;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        div {
+            margin: 15px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 350px;
+            gap: 30px;
+
+            button {
+                border-radius: 30px;
+                border: none;
+                height: 40px;
+                width: 120px;
+                font-size: 20px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 500ms;
+                @include shadows;
+
+                &:hover {
+                    opacity:var(--O);
+                }
+
+                @mixin genderB {
+                    height: 60px;
+                    border-radius: 20px;
+                }
+
+                &.bBoy{
+                    @include genderB;
+                    background: #90C8F5;
+                    
+                }
+
+                &.bGirl{
+                    @include genderB;
+                    background: #FFA5C9;
+                    
+                }
+
+                &.bCancel{
+                    background: #EFEFEF;
+                }
+
+                &.bReady{
+                    background: #FF5D17;
+                    
+                }
+            }
+        }
+
+        -webkit-box-shadow: 0px 11px 7px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 11px 7px 2px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 11px 7px 2px rgba(34, 60, 80, 0.2);
+    }
+}
+
