@@ -8,6 +8,7 @@
         font-weight: 600;
         font-size: 24px;
         margin-top: 5px;
+        padding-left: 10px;
     }
     &_img {
         border-top-left-radius: 20px;
@@ -18,9 +19,11 @@
         font-size: 12px;
         color: #9A9595;
         margin-top: 5px;
+        padding-left: 10px;
     }
 }
 .form-medical-employee_footer {
+    padding-left: 10px;
     display: flex;
     flex-direction: row;
     margin-top: 20px; 
@@ -34,7 +37,7 @@
         font-weight: 400;
     }
     &_like {
-      margin-right: 40px;
+      margin-right: 30px;
       margin-left: auto;
     }
 }

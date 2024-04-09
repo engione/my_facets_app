@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AccountPage } from "./pages/AccountPage";
 import BModal from "./components/Modal/BModal";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { MedicalEmployee } from "./components/MedicalEmployee/MedicalEmployee";
 
 
 
@@ -12,14 +13,15 @@ import Sidebar from "./components/Sidebar/Sidebar";
 export function App() {
   return (
     <>
-      <BrowserRouter>
+      {/*<BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="auth_def" element={<AuthForm />} />
           <Route path="auth" element={<AccountPage />} />
         </Routes>
       </BrowserRouter>
-
+  */}
+  <MedicalEmployee FullName="Васильев Пётр Семёнович" Post="Медицинский работник" Salary="2500/день"/>
     </>
   );
 }
