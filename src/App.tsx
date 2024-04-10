@@ -1,12 +1,12 @@
 
 
-import { Room } from "./components/Room/Room";
+import { Registration } from "./components/Registration/Registration";
 
 
 export function App() {
   return (
     <>
-      <Room/>
+      <Registration/>
         {/*<MainPage />*/}
         {/* <AuthForm /> */}
 
