@@ -1,11 +1,11 @@
 
-import { Komnata } from "./components/Komnata/komnata";
+import { Lisst } from "./components/Lisst/Lisst";
 
 
 export function App() {
   return (
     <>
-      <Komnata />
+      <Lisst/>
         {/*<MainPage />*/}
         {/* <AuthForm /> */}
 
