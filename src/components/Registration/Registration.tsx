@@ -12,7 +12,7 @@ export const Registration =()=> {
  
     <div className="card-footer">
 
-<button className="card-button">Позвонить</button>
+<button className="card-button">Позвонить.</button>
 <button className="card-button">Написать</button>
 
     </div> 
