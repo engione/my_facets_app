@@ -1,10 +1,9 @@
 import { MainPage } from "./pages/MainPage";
-import "./App.css";
 import { AuthForm } from "./components/AuthForm/Auth";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AccountPage } from "./pages/AccountPage";
-import BModal from "./components/Modal/BModal";
-import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.css";
+
 
 
 

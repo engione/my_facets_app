@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "react-toastify/dist/ReactToastify.css";
 import "./ResetForm.scss";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { FormField } from "../FormField/FormField";
 
 const CreateResetSchema = z.object({
@@ -39,7 +39,7 @@ export const ResetForm = () => {
         })}
       >
         <FormField errorMessage={errors.email?.message}>
-          <input
+          <input className="input" 
             type="email"
             placeholder="Электронная почта"
             {...register("email")}
@@ -47,7 +47,7 @@ export const ResetForm = () => {
         </FormField>
         {sendKey && (
           <FormField>
-            <input type="text" placeholder="Введите код с почты" />
+            <input className="input"  type="text" placeholder="Введите код с почты" />
           </FormField>
         )}
         <Button type="submit">{sendKey ? "Изменить пароль" : "Запросить код"}</Button>

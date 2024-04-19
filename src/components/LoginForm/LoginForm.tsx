@@ -25,14 +25,14 @@ export const LoginForm = () => {
   return (
     <form className="login-form" onSubmit={handleSubmit(() => {})}>
       <FormField errorMessage={errors.email?.message}>
-        <input
+        <input className="input" 
           type="email"
           placeholder="Электронная почта"
           {...register("email")}
         />
       </FormField>
       <FormField errorMessage={errors.password?.message}>
-        <input type="password" placeholder="Пароль" {...register("password")} />
+        <input className="input"  type="password" placeholder="Пароль" {...register("password")} />
       </FormField>
       <Button type="submit">Войти</Button>
     </form>

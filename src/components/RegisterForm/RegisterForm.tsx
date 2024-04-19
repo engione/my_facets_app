@@ -3,7 +3,6 @@ import { FormField } from "../FormField/FormField";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "../Input/Input";
 import "./RegisterForm.scss";
 
 const CreateRegisterSchema = z.object({
@@ -36,26 +35,26 @@ export function RegisterForm() {
       )}
     >
       <FormField errorMessage={errors.surname?.message}>
-        <input type="text" placeholder="Фамилия" {...register("surname")} />
+        <input className="input" type="text" placeholder="Фамилия" {...register("surname")} />
       </FormField>
       <FormField errorMessage={errors.name?.message}>
-        <input type="text" placeholder="Имя" {...register("name")} />
+        <input className="input" type="text" placeholder="Имя" {...register("name")} />
       </FormField>
       <FormField errorMessage={errors.middlename?.message}>
-        <input type="text" placeholder="Отчество" {...register("middlename")} />
+        <input className="input" type="text" placeholder="Отчество" {...register("middlename")} />
       </FormField>
       <FormField errorMessage={errors.email?.message}>
-        <input
+        <input className="input"
           type="email"
           placeholder="Электронная почта"
           {...register("email")}
         />
       </FormField>
       <FormField errorMessage={errors.password?.message}>
-        <input type="password" placeholder="Пароль" {...register("password")} />
+        <input className="input" type="password" placeholder="Пароль" {...register("password")} />
       </FormField>
       <FormField>
-        <input type="password" placeholder="Пароль" />
+        <input className="input" type="password" placeholder="Пароль" />
       </FormField>
       <Button type="submit">Регистрация</Button>
     </form>
