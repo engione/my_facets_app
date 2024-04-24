@@ -3,7 +3,7 @@ import { LoginForm } from "../LoginForm/LoginForm";
 import { RegisterForm } from "../RegisterForm/RegisterForm";
 import "./AuthForm.scss";
 import { ResetForm } from "../ResetForm/ResetForm";
-import { ToastContainer } from "react-toastify";
+
 import { Link } from "react-router-dom";
 
 export const AuthForm = () => {
@@ -39,7 +39,6 @@ export const AuthForm = () => {
               </div>
             </div>
           </div>
-          <ToastContainer />
         </>
       );
     case "auth":
@@ -71,7 +70,6 @@ export const AuthForm = () => {
               </div>
             </div>
           </div>
-          <ToastContainer />
         </>
       );
     case "reset":
@@ -97,36 +95,7 @@ export const AuthForm = () => {
               </div>
             </div>
           </div>
-          <ToastContainer />
         </>
       );
   }
-
-  //   return (
-  //     <>
-  //       <div className="auth">
-  //         <img className="auth__logo" src="./src/assets/logo.svg" alt="" />
-  //         <p className="auth__title">
-  //           {authType === "register" ? "Регистрация" : "Авторизация"}
-  //         </p>
-  //         <div className="form">
-  //           {authType === "register" ? <RegisterForm /> : <LoginForm />}
-  //           <div className="form__info">
-  //             <span className="form__text">
-  //               {authType === "register" ? "Есть аккаунт? " : "Нет аккаунта? "}
-  //               <button className="form__btn" onClick={handleClick}>
-  //                 {authType === "register" ? "Войти" : "Регистрация"}
-  //               </button>
-  //             </span>
-  //             {authType === "auth" && (
-  //               <button className="form__btn" onClick={handleClick}>
-  //                 Забыли свой пароль?
-  //               </button>
-  //             )}
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <ToastContainer />
-  //     </>
-  //   );
 };

@@ -1,18 +1,38 @@
+@mixin bSettings {
+    -webkit-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
+    -moz-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
+    box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 4px;
-  width: 100%;
+  max-width: 100%;
+
+  .error-text {
+    color: red;
+    font-size: 12px;
+  }
 }
 
-.form-field__error-text {
-  color: red;
-  font-size: 12px;
+.personal-field {
+    width: 48%;
 }
 
-.form-field > input {
-    width: 300px;
+// .form-field > span {
+//     margin-left: 10px;
+//     font-size: 16px;
+//     font-weight: 700;
+//     color: #293241;
+//     text-transform: uppercase;
+// }
+
+
+
+.form-field > .input {
+  width: 300px;
   background-color: #e0fbfc;
   border-radius: 30px;
   font-size: 16px;
@@ -22,7 +42,7 @@
   padding-left: 30px;
 }
 
-.form-field > input {
+.form-field > .input {
   &::placeholder {
     font-size: 16px;
     font-weight: 500;
@@ -49,8 +69,27 @@
   }
 }
 
-.form-field:focus-within > input {
+.form-field:focus-within > .input {
   outline: none;
   border-color: #98c1d9;
 }
 
+.form-field > .personal-input {
+    max-width: 300px;
+    width: 100%;
+    background-color: #fff;  
+    background-image: none;   
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba($color: #000000, $alpha: 0.6);
+    border: 2px solid #555555;
+    padding: 10px 20px;
+    @include bSettings;
+
+    &::placeholder {
+        font-size: 18px;
+        font-weight: 700;
+        color: #00000033;
+    }
+}

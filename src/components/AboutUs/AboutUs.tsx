@@ -1,7 +1,7 @@
 import "./AboutUs.scss"
 export function AboutUs() {
     return (
-        <section className="about-us">
+        <section id="aboutUs" className="about-us">
             <div className="container about-us__container mx-auto">
                 <h3>О сервисе:</h3>
                 <div className="about-us__wrap-top">

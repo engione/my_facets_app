@@ -34,7 +34,7 @@ const ReviewsList: React.FC<ReviewsListProps> = ({ reviews }) => {
   const colors = ["#90C8F5", "#FFB703"];
 
   return (
-    <section className="reviews">
+    <section id="reviews" className="reviews">
       <div className="container mx-auto">
         <h3 className="reviews__title">Отзывы:</h3>
         <div className="flex space-x-4">

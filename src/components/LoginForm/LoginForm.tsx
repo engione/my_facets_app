@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "./LoginForm.scss";
 import { FormField } from "../FormField/FormField";
+import { api } from "../../api/config";
+import { useState } from "react";
+import { Circular } from "../Circular/Circular";
 
 const CreateLoginSchema = z.object({
   email: z.string().email("Некорректный формат почты"),
@@ -22,19 +25,52 @@ export const LoginForm = () => {
     resolver: zodResolver(CreateLoginSchema),
   });
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   return (
-    <form className="login-form" onSubmit={handleSubmit(() => {})}>
+    <form
+      className="login-form"
+      onSubmit={handleSubmit(({ email, password }) => {
+        setLoading(true);
+        api
+          .post("/auth/signin", {
+            email: email,
+            password: password,
+          })
+          .then(({ data }) => {
+            console.log(data);
+            reset();
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error(error);
+            setLoading(false);
+          });
+      })}
+    >
       <FormField errorMessage={errors.email?.message}>
         <input
+          className="input"
           type="email"
           placeholder="Электронная почта"
           {...register("email")}
         />
       </FormField>
       <FormField errorMessage={errors.password?.message}>
-        <input type="password" placeholder="Пароль" {...register("password")} />
+        <input
+          className="input"
+          type="password"
+          placeholder="Пароль"
+          {...register("password")}
+        />
       </FormField>
-      <Button type="submit">Войти</Button>
+      <Button type="submit">
+        {loading ? (
+          <Circular />
+        ) : (
+          "Войти"
+        )}
+      </Button>
     </form>
   );
 };
