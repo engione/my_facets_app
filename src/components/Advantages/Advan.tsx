@@ -2,7 +2,7 @@ import "./Advan.scss";
 
 export const Advantages = () => {
   return (
-    <section className="advantages">
+    <section id="advantages" className="advantages">
         <div className="container mx-auto advantages__container">
             <h2 className="advantages__title">Преимущества:</h2>
             <ul className="advantages__list">

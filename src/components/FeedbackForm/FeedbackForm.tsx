@@ -2,7 +2,7 @@ import "./FeedbackForm.scss";
 
 export const FeedbackForm = () => {
   return (
-    <section className="feedback">
+    <section id="feedback" className="feedback">
       <div className="container mx-auto">
         <h3 className="feedback__title">Оставить заявку:</h3>
         <form className="form-feedback">

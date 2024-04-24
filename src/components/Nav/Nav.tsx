@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Nav.scss"
 
 type TProps = {
@@ -10,23 +11,23 @@ export function Nav({className, v=false} : TProps) {
         <nav className="nav">
             <ul className={`nav__list ${className}`}>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <Link to="/#aboutUs" className="nav__link">
                         {v ? "Новости" : "О сервисе"}
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="/#advantages" className="nav__link">
                     {v ? "О нас" : "Преимущества"}
                         
                     </a>
                 </li>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="/#reviews" className="nav__link">
                         Отзывы  
                     </a>
                 </li>
                 <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <a href="/#feedback" className="nav__link">
                     {v ? "Обратная связь" : "Контакты"}     
                     </a>
                 </li>

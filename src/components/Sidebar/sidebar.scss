@@ -1,125 +1,125 @@
-
 aside {
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    font-family: "Inter", sans-serif;
-    position: relative;
-    width: 400px;
-    min-height: 1000px;
-    max-height: 1600px;
-    background: #EFEFEF;
-    border-radius: 30px;
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+  font-family: "Inter", sans-serif;
+  position: relative;
+  margin-left: 20px;
+  padding-bottom: 30px;
+  width: 400px;
+  height: 1100px;
+  background: #efefef;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+
+  @mixin bSettings {
+    -webkit-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.3);
+    -moz-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.3);
+    box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.3);
+  }
+
+  @include bSettings;
+
+  .logo {
+    width: 200px;
     display: flex;
-    flex-direction: column;
+    margin-top: 50px;
+    gap: 23px;
     align-items: center;
-    gap: 25px;
-    
-    @mixin bSettings {
-        -webkit-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
-        -moz-box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
-        box-shadow: 0px 7px 3px -2px rgba(34, 60, 80, 0.30);
+
+    h1 {
+      color: #272d4e;
+      font-size: 24px;
+      font-weight: 900;
+    }
+  }
+
+  h2 {
+    width: 311px;
+    font-weight: 800;
+    font-size: 21px;
+    color: #293241;
+  }
+
+  .sidebar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 344px;
+
+    button {
+      position: relative;
+      width: 344px;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      align-items: center;
+      cursor: pointer;
+      transition: 300ms ease;
+
+      span {
+        font-size: 24px;
+        line-height: 0;
+        margin-left: 10px;
+      }
+
+      .arrow {
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        line-height: 0;
+      }
+
+      &:hover {
+        background: #ffffff;
+        @include bSettings;
+      }
+
+      &.active {
+        background: #ff5d17;
+        @include bSettings;
+      }
+    }
+  }
+
+  .exit {
+    position: relative;
+    margin-top: auto;
+    width: 360px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+
+    .iconExit {
+      line-height: 0;
+      -moz-transform: scale(-1, -1);
+      -o-transform: scale(-1, -1);
+      -webkit-transform: scale(-1, -1);
+      transform: scale(-1, -1);
+      color: #ee6c4d;
+      margin-left: 10px;
     }
 
-    @include bSettings;
-
-    .logo {
-        width: 200px;
-        display: flex;
-        margin-top: 50px;
-        gap: 23px;
-        align-items: center;
-        
-        h1 {
-            color: #272D4E;
-            font-size: 24px;
-            font-weight: 900;
-        }
+    a {
+      color: #ee6c4d;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 10px;
+      font-weight: 500;
     }
 
-    h2 {
-        width: 311px;
-        font-weight: 800;
-        font-size: 21px;
-        color: #293241;
+    &::after {
+      content: "";
+      position: absolute;
+      background: #293241;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
     }
-
-    .sidebar {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        width: 344px;
-        
-        button {
-            position: relative;
-            width: 344px;
-            height: 40px;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            align-items: center;
-            cursor: pointer;
-            transition: 300ms ease;
-
-            span {
-                font-size: 24px;
-                line-height: 0;
-                margin-left: 10px;
-            }
-
-            .arrow {
-                position: absolute;
-                right: 10px;
-                top: 20%;
-                line-height: 0;
-            }
-
-            &:hover {
-                background: #FFFFFF;
-                @include bSettings;
-            }
-
-            &.active {
-                background: #FF5D17;
-                @include bSettings;            
-            }
-        }
-    }
-
-    .exit {
-        position: relative;
-        margin-top: auto;
-        margin-bottom: 40px;
-        width: 360px;
-        height: 34px;
-        display: flex;
-        align-items: center;
-        line-height: 0;        
-    
-        .iconExit {
-            line-height: 0;
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-            -webkit-transform: scale(-1, -1);
-            transform: scale(-1, -1);
-            color: #EE6C4D;
-            margin-left: 10px;
-        }
-
-        a {
-            color: #EE6C4D;
-            text-decoration: none;
-            font-size: 13px;
-            margin-left: 10px;
-            font-weight: 500;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            background: #293241;
-            width: 100%;
-            height: 1px;
-            bottom: 0;
-            left: 0;
-        }
-    }
+  }
 }

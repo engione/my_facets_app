@@ -10,24 +10,26 @@
   align-items: stretch;
   gap: 4px;
   max-width: 100%;
+
+  .error-text {
+    color: red;
+    font-size: 12px;
+  }
 }
 
 .personal-field {
     width: 48%;
 }
 
-.form-field > span {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #293241;
-    text-transform: uppercase;
-}
+// .form-field > span {
+//     margin-left: 10px;
+//     font-size: 16px;
+//     font-weight: 700;
+//     color: #293241;
+//     text-transform: uppercase;
+// }
 
-.form-field__error-text {
-  color: red;
-  font-size: 12px;
-}
+
 
 .form-field > .input {
   width: 300px;

@@ -1,17 +1,13 @@
-import { Header } from "../components/Header/Header";
 import Sidebar from "../components/Sidebar/Sidebar";
-import { FirstStep } from "./FirstStep";
-import { Settlement } from "../components/Settlement/Settlement";
+import { Outlet } from "react-router-dom";
 
 export const AccountPage = () => {
   return (
     <>
-      <Header />
       <section className="personal-account">
         <div className="container mx-auto personal-account__container flex gap-10">
           <Sidebar />
-          {/* <FirstStep /> */}
-          <Settlement />
+          <Outlet />
         </div>
       </section>
     </>

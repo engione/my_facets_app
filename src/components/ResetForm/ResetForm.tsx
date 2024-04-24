@@ -1,12 +1,11 @@
 import { Button } from "../Button/Button";
-import { Notification } from "../Notification/Notification";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import "react-toastify/dist/ReactToastify.css";
 import "./ResetForm.scss";
 import { useState } from "react";
 import { FormField } from "../FormField/FormField";
+import toast from "react-hot-toast";
 
 const CreateResetSchema = z.object({
   email: z.string().email("Некорректный формат почты"),
@@ -26,7 +25,7 @@ export const ResetForm = () => {
   });
 
   const notify = () => {
-    Notification("Код отправлен");
+    toast.success("Код выслан на почту!");
   };
 
   return (
@@ -39,7 +38,8 @@ export const ResetForm = () => {
         })}
       >
         <FormField errorMessage={errors.email?.message}>
-          <input className="input" 
+          <input
+            className="input"
             type="email"
             placeholder="Электронная почта"
             {...register("email")}
@@ -47,10 +47,16 @@ export const ResetForm = () => {
         </FormField>
         {sendKey && (
           <FormField>
-            <input className="input"  type="text" placeholder="Введите код с почты" />
+            <input
+              className="input"
+              type="text"
+              placeholder="Введите код с почты"
+            />
           </FormField>
         )}
-        <Button type="submit">{sendKey ? "Изменить пароль" : "Запросить код"}</Button>
+        <Button type="submit">
+          {sendKey ? "Изменить пароль" : "Запросить код"}
+        </Button>
       </form>
     </>
   );
