@@ -7,7 +7,7 @@ type PropsLogo = {
 
 export function Logo( {imgUrl, className} : PropsLogo) {
   return (
-    <a className={`logo ${className}`} href="#">
+    <a className={`logo ${className}`} href="/">
       <img src={'../../src/assets/logo_name.svg'} alt="Логотип Мои грани" />
     </a>
   );

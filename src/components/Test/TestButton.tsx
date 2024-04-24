@@ -14,7 +14,7 @@ export const TestButton: React.FC<TestButtonProps> = ({ text, isActive, onClick 
             onClick={onClick}
         >
             <img 
-                src="src/components/Test/ok-circle.svg" 
+                src="../../src/assets/ok-circle.svg" 
                 className={`icon-ok ${isActive ? 'active' : ''}`} 
             />
             {text}

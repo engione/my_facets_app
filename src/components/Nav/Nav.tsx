@@ -11,9 +11,9 @@ export function Nav({className, v=false} : TProps) {
         <nav className="nav">
             <ul className={`nav__list ${className}`}>
                 <li className="nav__item">
-                    <Link to="/#aboutUs" className="nav__link">
+                    <a href="/#aboutUs" className="nav__link">
                         {v ? "Новости" : "О сервисе"}
-                    </Link>
+                    </a>
                 </li>
                 <li className="nav__item">
                     <a href="/#advantages" className="nav__link">

@@ -1,0 +1,95 @@
+.first {
+  padding: 10px 27px;
+  background-color: #ff6622;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+
+  &[type="submit"] {
+    background-color: #ee6c4d;
+  }
+
+  &:hover {
+    background-color: #f29078;
+  }
+}
+
+.secondary {
+  padding-block: 10px;
+  padding-inline: 40px;
+  background-color: #ff5d17;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 20px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f29078;
+  }
+}
+
+.white {
+  padding-block: 10px;
+  padding-inline: 40px;
+  background-color: #fff;
+  color: #ff5d17;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.bordered {
+  padding-block: 10px;
+  padding-inline: 40px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #fff;
+    color: #ff5d17;
+  }
+}
+
+.third {
+  padding: 5px 15px;
+  padding-left: 25px;
+  border: 1px solid #edededae;
+  background-color: #ffffff;
+  background-image: url("./src/assets/logo-edit.svg");
+  background-repeat: no-repeat;
+  background-position: top 60% left 5px;
+  background-size: 18px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 117%;
+  color: #293241;
+  transition: box-shadow .3s ease;
+
+  &:hover {
+
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .secondary {
+    padding-inline: 12px;
+    font-size: 13px;
+  }
+}

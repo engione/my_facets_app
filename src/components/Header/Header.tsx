@@ -5,18 +5,27 @@ import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 
 export function Header() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="container header__container mx-auto">
-        <Logo imgUrl="logo_name.svg"/>
+        <Logo imgUrl="logo_name.svg" />
         <div className="header__wrapper header__wrapper_center">
-          <Nav className=""/>
-          <input className="search-input" type="text" placeholder="События и места" />
+          <Nav className="" />
+          <input
+            className="search-input"
+            type="text"
+            placeholder="События и места"
+          />
         </div>
         <div className="header__wrapper header__wrapper_right">
-            <span className="location">Москва</span>
-            <Button onClick={() => navigate("auth", {replace: false})} className="btn-secondary">Войти</Button>
+          <span className="location">Москва</span>
+          <Button
+            version="secondary"
+            onClick={() => navigate("auth", { replace: false })}
+          >
+            Войти
+          </Button>
         </div>
       </div>
     </header>

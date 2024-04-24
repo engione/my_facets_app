@@ -22,7 +22,7 @@ export const Footer = () => {
             <p className="footer__todo">
               Смело нажимайте на кнопку ниже и мы решим ваш вопрос
             </p>
-            <Button className="btn-secondary">Оставить заявку</Button>
+            <Button version="secondary">Оставить заявку</Button>
           </div>
           <div className="footer__wrapper footer__wrapper_right">
             <div className="socials footer__socials">

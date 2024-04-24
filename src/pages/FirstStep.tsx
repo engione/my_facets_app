@@ -26,8 +26,7 @@ export const FirstStep = () => {
               <UserInfo />
               <Button
                 onClick={handleClick}
-                className="btn-edit"
-                bgImage="/src/assets/logo-edit.svg"
+                version="third"
               >
                 Редактировать профиль
               </Button>
@@ -38,13 +37,15 @@ export const FirstStep = () => {
                 <div className="flex gap-5">
                   <Button
                     onClick={handleClick}
-                    className="btn-secondary text-sm py-1 px-3"
+                    version="secondary"
+                    className="text-sm py-1 px-3"
                   >
                     Отменить изменения
                   </Button>
                   <Button
                     onClick={handleClick}
-                    className="btn-secondary text-sm py-1 px-3"
+                    version="secondary"
+                    className="text-sm py-1 px-3"
                   >
                     Сохранить изменения
                   </Button>
@@ -91,7 +92,7 @@ export const FirstStep = () => {
           <div className="questionnaires flex flex-col gap-4 pt-10 border-t-4">
             <div className="questionnaires__top-wrap flex justify-between">
               <h4 className="text-lg font-bold">Мои анкеты</h4>
-              <Button className="btn-secondary text-sm py-1 px-3">
+              <Button version="secondary" className="text-sm py-1 px-3">
                 Добавить анкету
               </Button>
             </div>

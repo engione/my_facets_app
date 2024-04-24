@@ -4,10 +4,11 @@ import { RegisterForm } from "../RegisterForm/RegisterForm";
 import "./AuthForm.scss";
 import { ResetForm } from "../ResetForm/ResetForm";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const AuthForm = () => {
   const [authType, setAuthType] = useState<string>("register");
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setAuthType((prevState) =>
@@ -19,10 +20,10 @@ export const AuthForm = () => {
     case "register":
       return (
         <>
-          <div className="link-wrapper">
-            <Link to={"/"}>
+          <div className="btn-back__wrapper">
+            <button onClick={() => navigate(-1)}>
               Вернуться назад
-            </Link>
+            </button>
           </div>
           <div className="auth">
             <img className="auth__logo" src="./src/assets/logo.svg" alt="" />
@@ -44,10 +45,10 @@ export const AuthForm = () => {
     case "auth":
       return (
         <>
-          <div className="link-wrapper">
-            <Link to={"/"}>
+          <div className="btn-back__wrapper">
+            <button onClick={() => navigate(-1)}>
               Вернуться назад
-            </Link>
+            </button>
           </div>
           <div className="auth">
             <img className="auth__logo" src="./src/assets/logo.svg" alt="" />
@@ -75,10 +76,10 @@ export const AuthForm = () => {
     case "reset":
       return (
         <>
-          <div className="link-wrapper">
-            <Link to={"/"}>
+          <div className="btn-back__wrapper">
+            <button onClick={() => navigate(-1)}>
               Вернуться назад
-            </Link>
+            </button>
           </div>
           <div className="auth">
             <img className="auth__logo" src="./src/assets/logo.svg" alt="" />

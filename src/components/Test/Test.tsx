@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { TestButton } from "./TestButton";
 import './Test.scss';
+import { Button } from '../Button/Button';
 
 //Переменные временное решение, текст должен быть взят из БД.
 const questone:string = 'Совершеннолетние и тренерский состав'
@@ -12,14 +13,21 @@ const types = [questone, questtwo, questthree];
 export const Test = () => {
     const [active, setActive] = useState(types[0]);
     return (
-        <div className='button-container'>
-            {types.map((type) => (
-                <TestButton 
-                    text={type} 
-                    isActive={active === type} 
-                    onClick={() => setActive(type)}
-                />
-            ))}
-        </div>
+        
+        <section>
+            <div className="container mx-auto test__container">
+                <h2>В поездке будут учавствовать</h2>
+                <div className='button-container'>
+                    {types.map((type) => (
+                        <TestButton
+                            text={type}
+                            isActive={active === type}
+                            onClick={() => setActive(type)}
+                        />
+                    ))}
+                <Button className="underline underline-offset-4" version="secondary">Далее</Button>
+                </div>
+            </div>
+        </section>
     );
 };
