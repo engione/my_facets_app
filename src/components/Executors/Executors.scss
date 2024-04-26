@@ -1,0 +1,31 @@
+.executors {
+    max-width: 860px;
+    width: 100%;
+}
+.executors__container {
+  h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 64px;
+    color: #293241;
+  }
+}
+
+.executors-group {
+  h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 32px;
+    color: #293241;
+  }
+
+  .card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.executors-group__medical {
+    margin-bottom: 30px;
+}

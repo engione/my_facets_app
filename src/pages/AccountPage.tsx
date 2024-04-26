@@ -5,7 +5,7 @@ export const AccountPage = () => {
   return (
     <>
       <section className="personal-account">
-        <div className="container mx-auto personal-account__container flex gap-10">
+        <div className="container mx-auto personal-account__container justify-between flex gap-10">
           <Sidebar />
           <Outlet />
         </div>

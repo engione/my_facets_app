@@ -24,6 +24,11 @@ export const Button: FC<PropsButton> = ({
         <button
           type={type}
           onClick={onClick}
+          style={
+            bgImage
+              ? { backgroundImage: `url(${bgImage})`, paddingLeft: "50px" }
+              : {}
+          }
           className={className ? `${btn.first} ${className}` : `${btn.first}`}
         >
           {children}
@@ -69,7 +74,9 @@ export const Button: FC<PropsButton> = ({
         <button
           type={type}
           onClick={onClick}
-          className={className ? `${btn.bordered} ${className}` : `${btn.bordered}`}
+          className={
+            className ? `${btn.bordered} ${className}` : `${btn.bordered}`
+          }
         >
           {children}
         </button>

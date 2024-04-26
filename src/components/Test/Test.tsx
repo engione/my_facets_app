@@ -14,9 +14,12 @@ export const Test = () => {
     const [active, setActive] = useState(types[0]);
     return (
         
-        <section>
+        <section className="test">
             <div className="container mx-auto test__container">
-                <h2>В поездке будут учавствовать</h2>
+                <div className="test-info">
+                    <h2>В поездке будут учавствовать</h2>
+                    <p>Выберите один вариант ответа</p>
+                </div>
                 <div className='button-container'>
                     {types.map((type) => (
                         <TestButton

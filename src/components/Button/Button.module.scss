@@ -7,6 +7,8 @@
   font-weight: 500;
   border-radius: 12px;
   transition: background-color 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: center left 3%;
 
   &[type="submit"] {
     background-color: #ee6c4d;
@@ -65,9 +67,13 @@
 }
 
 .third {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 5px 15px;
   padding-left: 25px;
-  border: 1px solid #edededae;
+  border: 1px solid #e1e1e1f7;
   background-color: #ffffff;
   background-image: url("./src/assets/logo-edit.svg");
   background-repeat: no-repeat;
@@ -78,13 +84,11 @@
   font-size: 15px;
   line-height: 117%;
   color: #293241;
-  transition: box-shadow .3s ease;
+  transition: box-shadow 0.3s ease;
 
   &:hover {
-
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-
 }
 
 @media (max-width: 1024px) {

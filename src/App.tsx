@@ -9,6 +9,8 @@ import { Settlement } from "./components/Settlement/Settlement";
 import { Toaster } from "react-hot-toast";
 import { TestPage } from "./pages/TestPage";
 import { Test } from "./components/Test/Test";
+import { Executors } from "./components/Executors/Executors";
+import { TournamentGrid } from "./components/TournamentGrid/TournamentGrid";
 
 export function App() {
   return (
@@ -31,6 +33,8 @@ export function App() {
             <Route path="account" element={<AccountPage />}>
               <Route index element={<FirstStep />} />
               <Route path="settlement" element={<Settlement />} />
+              <Route path="executor" element={<Executors />} />
+              <Route path="tournament" element={<TournamentGrid />} />
             </Route>
           </Route>
           <Route path="auth" element={<AuthForm />} />

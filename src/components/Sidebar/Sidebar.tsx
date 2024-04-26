@@ -7,7 +7,7 @@ import { IoDocumentTextOutline, IoDocumentsOutline } from "react-icons/io5";
 import { GrSchedules } from "react-icons/gr";
 import { RxExit } from "react-icons/rx";
 import { useState } from "react";
-import "./sidebar.scss";
+import "./Sidebar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -29,7 +29,7 @@ export default function Sidebar() {
       step: 3,
       path: "/account",
       icon: <PiHouseSimple />,
-      name: "Шаг 3 - логистика",
+      name: "Шаг 3 - Логистика",
     },
     {
       step: 4,
@@ -57,13 +57,13 @@ export default function Sidebar() {
     },
     {
       step: 8,
-      path: "/account",
+      path: "/account/tournament",
       icon: <MdOutlinePeople />,
       name: "Шаг 8 - Турнирная сетка",
     },
     {
       step: 9,
-      path: "/account",
+      path: "/account/executor",
       icon: <IoDocumentTextOutline />,
       name: "Шаг 9 - Исполнители",
     },
