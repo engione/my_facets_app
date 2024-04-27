@@ -3,26 +3,20 @@ import { FormField } from "../FormField/FormField";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import "./RegisterForm.scss";
-import axios from "axios";
 import { api } from "../../api/config";
 import { useState } from "react";
 import { Circular } from "../Circular/Circular";
+import { addUserData } from "../../store/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import "./RegisterForm.scss";
+import { CreateRegisterSchema } from "../../schemas/RegisterSchema";
 
-const CreateRegisterSchema = z.object({
-  surname: z.string().min(2, "Длина фамилии должна быть не менее 2 символов"),
-  name: z.string().min(2, "Длина имени должна быть не менее 2 символов"),
-  middlename: z
-    .string()
-    .min(5, "Длина отчества должна быть не менее 5 символов"),
-  email: z.string().email("Некорректный формат почты"),
-  password: z.string().min(8, "Длина пароля должна быть не менее 8 символов"),
-  repeatPassword: z.string(),
-});
+
 
 type CreateRegisterForm = z.infer<typeof CreateRegisterSchema>;
 
-export function RegisterForm() {
+export function RegisterForm({ setToken, setAuthBtn }: any) {
   const {
     register,
     handleSubmit,
@@ -33,6 +27,8 @@ export function RegisterForm() {
   });
 
   const [loading, setLoading] = useState<boolean>(false);
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   return (
     <form
@@ -53,6 +49,11 @@ export function RegisterForm() {
                 console.log(data);
                 reset();
                 setLoading(false);
+                setToken(data);
+                setAuthBtn(false);
+                console.log(data);
+                dispatch(addUserData(data));
+                navigate("/", { replace: true });
               })
               .catch((error) => {
                 console.error(error);
@@ -100,7 +101,7 @@ export function RegisterForm() {
         <input
           title="Пароль должен состоять из большой, маленькой буквы, цифр и знака"
           className="input"
-          type="password"
+          type="text"
           placeholder="Пароль"
           {...register("password")}
         />

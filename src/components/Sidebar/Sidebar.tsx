@@ -8,9 +8,9 @@ import { GrSchedules } from "react-icons/gr";
 import { RxExit } from "react-icons/rx";
 import { useState } from "react";
 import "./Sidebar.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar({ handleLogout }: any) {
   const navigate = useNavigate();
   const btnList = [
     {
@@ -105,7 +105,7 @@ export default function Sidebar() {
               active={btnActive === btn.step}
               onClick={() => {
                 setBtnActive(btn.step);
-                navigate(btn.path)
+                navigate(btn.path);
               }}
             />
           );
@@ -115,7 +115,7 @@ export default function Sidebar() {
         <span>
           <RxExit className="iconExit" />
         </span>
-        <a href="#">Выйти</a>
+        <button onClick={() => handleLogout()}>Выйти</button>
       </div>
     </aside>
   );

@@ -4,7 +4,11 @@ import { Button } from "../Button/Button";
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 
-export function Header() {
+type THeader = {
+    authBtn?: boolean;
+}
+
+export function Header({ authBtn = true } : THeader) {
   const navigate = useNavigate();
   return (
     <header className="header">
@@ -20,12 +24,21 @@ export function Header() {
         </div>
         <div className="header__wrapper header__wrapper_right">
           <span className="location">Москва</span>
-          <Button
-            version="secondary"
-            onClick={() => navigate("auth", { replace: false })}
-          >
-            Войти
-          </Button>
+          {authBtn ? (
+            <Button
+              version="secondary"
+              onClick={() => navigate("auth", { replace: false })}
+            >
+              Войти
+            </Button>
+          ) : (
+            <Button
+              version="secondary"
+              onClick={() => navigate("account", { replace: false })}
+            >
+              Профиль
+            </Button>
+          )}
         </div>
       </div>
     </header>

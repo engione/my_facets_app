@@ -6,11 +6,10 @@ type TLayout = {
   authBtn: boolean;
 };
 
-export const Layout = () => {
+export const Layout = ({ authBtn }: TLayout) => {
   return (
     <>
-
-      <Header />
+      <Header authBtn={authBtn} />
 
       <main>
         <Outlet />

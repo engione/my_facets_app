@@ -7,15 +7,17 @@ import { FormField } from "../FormField/FormField";
 import { api } from "../../api/config";
 import { useState } from "react";
 import { Circular } from "../Circular/Circular";
+import { addUserData } from "../../store/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { CreateLoginSchema } from "../../schemas/LoginSchema";
+import toast from "react-hot-toast";
 
-const CreateLoginSchema = z.object({
-  email: z.string().email("Некорректный формат почты"),
-  password: z.string().min(8, "Длина пароля должна быть не менее 8 символов"),
-});
+
 
 type CreateLoginForm = z.infer<typeof CreateLoginSchema>;
 
-export const LoginForm = () => {
+export const LoginForm = ({ setToken, setAuthBtn }: any) => {
   const {
     register,
     handleSubmit,
@@ -26,6 +28,13 @@ export const LoginForm = () => {
   });
 
   const [loading, setLoading] = useState<boolean>(false);
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const notify = () => {
+    toast.success("Вы вошли в аккаунт");
+  };
+
 
   return (
     <form
@@ -41,6 +50,13 @@ export const LoginForm = () => {
             console.log(data);
             reset();
             setLoading(false);
+            setToken(data);
+            setAuthBtn(false)
+            console.log(data);
+            dispatch(addUserData(data));
+            navigate("/", {replace: true})
+            notify()
+
           })
           .catch((error) => {
             console.error(error);
@@ -64,13 +80,7 @@ export const LoginForm = () => {
           {...register("password")}
         />
       </FormField>
-      <Button type="submit">
-        {loading ? (
-          <Circular />
-        ) : (
-          "Войти"
-        )}
-      </Button>
+      <Button type="submit">{loading ? <Circular /> : "Войти"}</Button>
     </form>
   );
 };

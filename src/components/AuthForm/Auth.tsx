@@ -4,10 +4,11 @@ import { RegisterForm } from "../RegisterForm/RegisterForm";
 import "./AuthForm.scss";
 import { ResetForm } from "../ResetForm/ResetForm";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const AuthForm = () => {
-  const [authType, setAuthType] = useState<string>("register");
+
+export const AuthForm = ({setToken, setAuthBtn} : any) => {
+  const [authType, setAuthType] = useState<string>("auth");
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -29,7 +30,7 @@ export const AuthForm = () => {
             <img className="auth__logo" src="./src/assets/logo.svg" alt="" />
             <p className="auth__title">Регистрация</p>
             <div className="form">
-              <RegisterForm />
+              <RegisterForm setAuthBtn={setAuthBtn} setToken={setToken} />
               <div className="form__info">
                 <span className="form__text">
                   Есть аккаунт&nbsp;
@@ -54,7 +55,7 @@ export const AuthForm = () => {
             <img className="auth__logo" src="./src/assets/logo.svg" alt="" />
             <p className="auth__title">Вход</p>
             <div className="form">
-              <LoginForm />
+              <LoginForm setAuthBtn={setAuthBtn} setToken={setToken}/>
               <div className="form__info">
                 <span className="form__text">
                   Нет аккаунта&nbsp;
