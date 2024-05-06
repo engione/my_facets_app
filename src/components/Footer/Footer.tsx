@@ -29,17 +29,17 @@ export const Footer = () => {
               <ul className="socials__list">
                 <li className="socials__item">
                   <a href="#" className="social-link">
-                    <img src="../src/assets/vk.svg" alt="Вконтакте" />
+                    <img src="./src/assets/vk.svg" alt="Вконтакте" />
                   </a>
                 </li>
                 <li className="socials__item">
                   <a href="#" className="social-link">
-                    <img src="../src/assets/tg.svg" alt="Телеграм" />
+                    <img src="./src/assets/tg.svg" alt="Телеграм" />
                   </a>
                 </li>
                 <li className="socials__item">
                   <a href="#" className="social-link">
-                    <img src="../src/assets/oc.svg" alt="Одноклассники" />
+                    <img src="./src/assets/oc.svg" alt="Одноклассники" />
                   </a>
                 </li>
               </ul>

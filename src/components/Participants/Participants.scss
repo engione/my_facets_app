@@ -1,0 +1,24 @@
+.participants {
+  width: 100%; 
+}
+
+.participants > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 64px;
+    color: #293241;
+  }
+
+  .participants__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

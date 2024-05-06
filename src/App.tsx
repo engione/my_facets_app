@@ -14,6 +14,9 @@ import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { addUserData } from "./store/authSlice";
 import "./App.css";
+import { Participants } from "./components/Participants/Participants";
+import { ParticipantsCard } from "./components/ParticipantsCard/ParticipantsCard";
+import { ParticipantsForm } from "./components/ParticipantsForm/ParticipantsForm";
 
 export function App() {
   const dispatch = useDispatch();
@@ -50,14 +53,36 @@ export function App() {
             <Route index element={<MainPage />} />
             <Route path="test" element={<TestPage />} />
             <Route path="test/:id" element={<Test />} />
-            <Route path="account" element={<AccountPage setToken={setToken} setAuthBtn={setAuthBtn} />}>
+            <Route
+              path="account"
+              element={
+                <AccountPage setToken={setToken} setAuthBtn={setAuthBtn} />
+              }
+            >
               <Route index element={<FirstStep />} />
+              <Route path="participants" element={<Participants />}>
+                <Route
+                  index
+                  element={
+                    <div className="participants__cards">
+                      <ParticipantsCard />
+                      <ParticipantsCard />
+                      <ParticipantsCard />
+                      <ParticipantsCard />
+                    </div>
+                  }
+                />
+                <Route path="edit" element={<ParticipantsForm />} />
+              </Route>
               <Route path="settlement" element={<Settlement />} />
               <Route path="executor" element={<Executors />} />
               <Route path="tournament" element={<TournamentGrid />} />
             </Route>
           </Route>
-          <Route path="auth" element={<AuthForm setToken={setToken} setAuthBtn={setAuthBtn} />} />
+          <Route
+            path="auth"
+            element={<AuthForm setToken={setToken} setAuthBtn={setAuthBtn} />}
+          />
         </Routes>
       </BrowserRouter>
     </>
